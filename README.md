@@ -2,7 +2,7 @@
 Windows Local Privilege Escalation via CdpSvc service (Writeable SYSTEM path Dll Hijacking)
 
 #### Short Description:
-Connected Devices Platform Service (or CDPSvc) is a service which runs as `NT AUTHORITY\LOCAL SERVICE` and tries to load the missing **cdpsgshims.dll** DLL on startup with a call to `LoadLibrary()`, without specifying its absolute path. So, it can be hijack dll in the folder of Dll Search Order flow and we will get process or shell access with `NT AUTHORITY\LOCAL SERVICE` if we hijack the dll in SYSTEM PATH writeable place such as `C:\python27`. Then, I just combine it with [@itm4n](https://twitter.com/itm4n)'s [PrintSpoofer](https://github.com/itm4n/PrintSpoofer) technique to get `NT AUTHORITY\SYSTEM` access.
+Connected Devices Platform Service (or CDPSvc) is a service which runs as `NT AUTHORITY\LOCAL SERVICE` and tries to load the missing **cdpsgshims.dll** DLL on startup with a call to `LoadLibrary()`, without specifying its absolute path. So, it can be hijack dll in the folder of Dll Search Order flow and we will get process or shell access with `NT AUTHORITY\LOCAL SERVICE` if we hijack the dll in SYSTEM PATH writable place such as `C:\python27`. Then, I just combine it with [@itm4n](https://twitter.com/itm4n)'s [PrintSpoofer](https://github.com/itm4n/PrintSpoofer) technique to get `NT AUTHORITY\SYSTEM` access.
 
 #### Usage:
 1. Find Writable SYSTEM PATH with acltest.ps1 (such as C:\python27)<br>
