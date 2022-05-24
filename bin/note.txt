@@ -1,4 +1,5 @@
 1. Find Writable SYSTEM PATH with acltest.ps1 (such as C:\python27)
+C:\CdpSvcLPE> powershell -ep bypass ". .\acltest.ps1"
 
 2. Copy cdpsgshims.dll to C:\python27 
 
