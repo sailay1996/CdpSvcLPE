@@ -1,0 +1,4 @@
+reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH
+
+
+Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\Environment' -Name PATH
